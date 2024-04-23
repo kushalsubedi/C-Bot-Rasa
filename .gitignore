@@ -1,0 +1,9 @@
+# write gitignore for rasa chatbot 
+
+echo "## Rasa specific files
+*.log
+*.db
+models/*
+env/
+__pycache__/
+.rasa/

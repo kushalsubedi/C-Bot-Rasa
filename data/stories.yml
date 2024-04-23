@@ -1,0 +1,65 @@
+version: "3.1"
+
+stories:
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_ask_phone
+  - intent: phone
+    entities:
+    - number: 1234567890
+    - slot_was_set:
+      - phone: 1234567890
+  - action: action_ask_phone
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story : Express thank
+  steps :
+  - intent : thank
+  - action : utter_thanks
+
+- story : Get Item Price 
+  steps:
+  - intent : get_item_price
+    entities:
+    - item: "Chilly Momo"
+    - slot_was set:
+      - Food: "Chilly Momo"
+  - action : action_get_item_price
+
+- story: User asks for item price with another different item
+  steps:
+  - intent: get_item_price
+    entities:
+      - item: "Coffee"
+  - action: action_get_item_price
+  - slot_was_set:
+      - Food: "Coffee"
+- story: User asks for item price with any item
+  steps:
+  - intent: get_item_price
+    entities:
+      - item: null
+  - action: action_get_item_price
+  - slot_was_set:
+      - Food: null

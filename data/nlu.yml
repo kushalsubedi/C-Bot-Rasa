@@ -1,0 +1,136 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: thank
+  examples: |
+    - Thank you
+    - Thanks
+    - Thank you very much
+    - Thanks a lot
+    - Thank you so much
+    - Thank you very much indeed
+    - Danke
+- intent: my_name
+  examples: |
+    - My name is [John](name)
+    - I am [Sarah](name)
+    - Call me [Mary](name)
+    - You can call me [Michael](name)
+    - I'm [Tom](name)
+    - This is [Alice](name)
+- intent: phone
+  examples: |
+    - [1234567890](number)
+    - This is my number [1234567890](number)
+    - My number is [1234567890](number)
+- intent: repeat_phone
+  examples: |
+    - what is my number
+    - can you repeat my number
+    - tell me my number
+- intent: get_item_price
+  examples: |
+    - what is the price of [momo](item)?
+    - how much does [pizza](item) cost?
+    - what is the price of [burger](item)?
+    - how much does [pasta](item) cost?
+    - what is the price of [noodles](item)?
+    - how much does [sandwich](item) cost?
+    - what is the price of [fries](item)?
+    - how much does [cake](item) cost?
+    - what is the price of [ice cream](item)?
+    - how much does [coffee](item) cost?
+    - what is the price of [tea](item)?
+    - how much does [juice](item) cost?
+    - what is the price of [soda](item)?
+    - how much does [water](item) cost?
+    - what is the price of [beer](item)?
+    - [coffe](item) price ?
+    - [tea](item) price ?
+    - [juice](item) price ?
+    - [soda](item) price ?
+    - [water](item) price ?
+    - price of [beer](item) ?
+    - price of [momo](item) ?
+    - what is the price of [Chilly Momo]{"entity": "item", "value": "Chilly momo"}
