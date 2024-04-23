@@ -1,5 +1,6 @@
 version: "3.1"
 nlu:
+
 - intent: greet
   examples: |
     - hey
@@ -134,3 +135,7 @@ nlu:
     - price of [beer](item) ?
     - price of [momo](item) ?
     - what is the price of [Chilly Momo]{"entity": "item", "value": "Chilly momo"}
+    - what is the price of [Chicken chilly]{"entity":"item","value": "Chicken Chilly"}
+    - what is the price of [mocha coffee](item)?
+    - what is the price of [Mocha coffee](item)?
+
