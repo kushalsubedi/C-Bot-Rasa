@@ -43,3 +43,7 @@ stories:
   - intent: get_item_price
   - action: action_get_item_price
 
+- story : table reservation 
+  steps: 
+  - intent: get_table_reservation
+  - action: action_reserve_table

@@ -12,9 +12,13 @@ intents:
 - phone
 - repeat_phone
 - thank
+- get_table_reservation
+
 entities:
 - item
 - number
+- day
+
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -36,6 +40,8 @@ responses:
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+  
 slots:
   phone:
     type: text
@@ -43,12 +49,23 @@ slots:
     mappings:
     - type: from_entity
       entity: number
+
+      
   Food:
     type: text
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: item
+
+  Day:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: day
+
 actions:
 - action_get_item_price
 - action_ask_phone
+- action_reserve_table

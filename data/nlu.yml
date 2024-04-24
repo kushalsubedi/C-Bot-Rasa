@@ -127,7 +127,7 @@ nlu:
     - what is the price of [soda](item)?
     - how much does [water](item) cost?
     - what is the price of [beer](item)?
-    - [coffe](item) price ?
+    - [coffee](item) price ?
     - [tea](item) price ?
     - [juice](item) price ?
     - [soda](item) price ?
@@ -138,4 +138,20 @@ nlu:
     - what is the price of [Chicken chilly]{"entity":"item","value": "Chicken Chilly"}
     - what is the price of [mocha coffee](item)?
     - what is the price of [Mocha coffee](item)?
+    - price of [chowmin](item)?
 
+- intent: get_table_reservation
+  examples: |
+    - i want to reserve a table?
+    - reservation?
+    - is there reservation available?
+    - can i make reservation for today?
+    - this [Sunday](day) i want reservation.
+    - is reservation available this [sunday](day)?
+    - this [Monday](day) can i get a seat at a table?
+    - table for two please
+    - need to book a table this [monday](day).
+    - heelo a reservation please
+    - reserve on [Tuesday](day).
+    - table for us in retaurant on [wednesday](day).
+    - can i have a table?

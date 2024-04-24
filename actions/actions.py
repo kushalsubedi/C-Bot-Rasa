@@ -24,17 +24,23 @@ class ActionGetItemPrice(Action):
         print ("Called")
         return "action_get_item_price"
     lookup_table = load_lookup_table("actions/Foods.csv")
-    print (lookup_table)
+    new_lookup_table={}
+    for key in lookup_table:
+        value = lookup_table[key]
+        new_key = key.replace(" ","")
+        new_lookup_table[new_key]= value
+
+    print (new_lookup_table)
     def run (self,dispatcher:CollectingDispatcher,tracker:Tracker,domain:Dict[Text,Any])->List[Dict[Text,Any]]:
         print ("Foods")
         item = tracker.get_slot("Food")
-        item = item.lower().strip()
+        item = item.lower().replace(" ","")
         print (item)
 
        
         if item is not None:
-            if item in self.lookup_table:
-                price = self.lookup_table[item]
+            if item in self.new_lookup_table:
+                price = self.new_lookup_table[item]
                 print (price)
                 dispatcher.utter_message(text=f"The price of {item} is {price}")
             else:
@@ -44,3 +50,15 @@ class ActionGetItemPrice(Action):
         return []
 
 
+class ActionTableReservation(Action):
+    def name(self)-> Text:
+        return "action_reserve_table"
+    
+    def run(self, dispatcher:CollectingDispatcher, tracker: Tracker, domain:Dict[Text, Any])-> List[Dict[Text,Any]]:
+        day = tracker.get_slot("Day")
+        print(day)
+        if day is None:
+            dispatcher.utter_message(text= f"can you give me the date for the reservation")
+        else:
+            dispatcher.utter_message(text= f"you want to reserve a seat for {day}?")
+        return []
