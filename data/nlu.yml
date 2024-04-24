@@ -134,3 +134,26 @@ nlu:
     - price of [beer](item) ?
     - price of [momo](item) ?
     - what is the price of [Chilly Momo]{"entity": "item", "value": "Chilly momo"}
+  
+- lookup : item
+  examples: |
+    - momo
+    - pizza
+    - burger
+    - pasta
+    - noodles
+    - sandwich
+    - fries
+    - cake
+    - ice cream
+    - coffee
+    - tea
+    - juice
+    - soda
+    - water
+    - beer
+    - chilly momo
+    - lemon ice tea
+    - cold coffee
+    - mocha coffee
+    
