@@ -14,10 +14,11 @@ intents:
 - thank
 - get_table_reservation
 
+
 entities:
-- item
 - number
-- day
+- item
+- DATE
 
 responses:
   utter_greet:
@@ -41,7 +42,7 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 
-  
+
 slots:
   phone:
     type: text
@@ -63,7 +64,7 @@ slots:
     influence_conversation: true
     mappings:
     - type: from_entity
-      entity: day
+      entity: DATE
 
 actions:
 - action_get_item_price

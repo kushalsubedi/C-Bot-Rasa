@@ -34,7 +34,9 @@ class ActionGetItemPrice(Action):
     def run (self,dispatcher:CollectingDispatcher,tracker:Tracker,domain:Dict[Text,Any])->List[Dict[Text,Any]]:
         print ("Foods")
         item = tracker.get_slot("Food")
-        item = item.lower().replace(" ","")
+        if item != None:
+            item = item.lower().replace(" ","")
+
         print (item)
 
        

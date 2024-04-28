@@ -50,13 +50,17 @@ language: en
 #     constrain_similarities: true
 
 pipeline:
-  - name: WhitespaceTokenizer
+  - name: SpacyNLP
+    model: en_core_web_md
+  - name: SpacyTokenizer
+  - name: SpacyFeaturizer
   - name: RegexFeaturizer
     case_sensitive: false 
     lookup_tables:
       foods: data/Foods.csv 
+  - name: SpacyEntityExtractor
+  # - name: LookupEntityExtractor
   - name: LexicalSyntacticFeaturizer
-  - name: CountVectorsFeaturizer
   - name: CountVectorsFeaturizer
     analyzer: char_wb
     min_ngram: 1

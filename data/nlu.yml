@@ -110,6 +110,8 @@ nlu:
     - what is my number
     - can you repeat my number
     - tell me my number
+
+
 - intent: get_item_price
   examples: |
     - what is the price of [momo](item)?
@@ -134,11 +136,13 @@ nlu:
     - [water](item) price ?
     - price of [beer](item) ?
     - price of [momo](item) ?
-    - what is the price of [Chilly Momo]{"entity": "item", "value": "Chilly momo"}
-    - what is the price of [Chicken chilly]{"entity":"item","value": "Chicken Chilly"}
-    - what is the price of [mocha coffee](item)?
-    - what is the price of [Mocha coffee](item)?
-    - price of [chowmin](item)?
+    - what is the price of [Chilly Momo]{"entity": "PRODUCT", "value": "Chilly momo"}
+    - what is the price of [Chicken chilly]{"entity":"PRODUCT","value": "Chicken Chilly"}
+    - what is the price of [mocha coffee](PRODUCT)?
+    - what is the price of [Mocha coffee](PRODUCT)?
+    - price of [chowmin](PRODUCT)?
+    
+
 
 - intent: get_table_reservation
   examples: |
@@ -146,12 +150,37 @@ nlu:
     - reservation?
     - is there reservation available?
     - can i make reservation for today?
-    - this [Sunday](day) i want reservation.
-    - is reservation available this [sunday](day)?
-    - this [Monday](day) can i get a seat at a table?
+    - this [Sunday](DATE) i want reservation.
+    - is reservation available this [sunday](DATE)?
+    - this [Monday](DATE) can i get a seat at a table?
     - table for two please
-    - need to book a table this [monday](day).
+    - need to book a table this [monday](DATE).
     - heelo a reservation please
-    - reserve on [Tuesday](day).
-    - table for us in retaurant on [wednesday](day).
+    - reserve on [Tuesday](DATE).
+    - table for us in retaurant on [wednesday](DATE).
     - can i have a table?
+
+  
+
+
+# - lookup: item
+#   examples: |
+#     - Chilly Momo
+#     - Chicken Chilly
+#     - Chowmin
+#     - Katti Roll
+#     - Coffee 
+#     - Mocha Coffee
+#     - Cold Coffee
+#     - Ice Tea
+#     - Lemon Ice Tea
+#     - Green Tea
+#     - Black Tea
+#     - Pizza
+#     - Burger
+#     - Sandwich
+#     - Pasta
+#     - Noodles
+#     - Fried Rice
+#     - Biryani
+#     - momo
