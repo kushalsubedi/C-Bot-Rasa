@@ -114,33 +114,32 @@ nlu:
 
 - intent: get_item_price
   examples: |
-    - what is the price of [momo](item)?
-    - how much does [pizza](item) cost?
-    - what is the price of [burger](item)?
-    - how much does [pasta](item) cost?
-    - what is the price of [noodles](item)?
-    - how much does [sandwich](item) cost?
-    - what is the price of [fries](item)?
-    - how much does [cake](item) cost?
-    - what is the price of [ice cream](item)?
-    - how much does [coffee](item) cost?
-    - what is the price of [tea](item)?
-    - how much does [juice](item) cost?
-    - what is the price of [soda](item)?
-    - how much does [water](item) cost?
-    - what is the price of [beer](item)?
-    - [coffee](item) price ?
-    - [tea](item) price ?
-    - [juice](item) price ?
-    - [soda](item) price ?
-    - [water](item) price ?
-    - price of [beer](item) ?
-    - price of [momo](item) ?
-    - what is the price of [Chilly Momo]{"entity": "PRODUCT", "value": "Chilly momo"}
-    - what is the price of [Chicken chilly]{"entity":"PRODUCT","value": "Chicken Chilly"}
-    - what is the price of [mocha coffee](PRODUCT)?
-    - what is the price of [Mocha coffee](PRODUCT)?
-    - price of [chowmin](PRODUCT)?
+    - what is the price of momo?
+    - how much does pizza cost?
+    - what is the price of[burger]?
+    - how much does [pasta] cost?
+    - what is the price of [noodles]?
+    - how much does [sandwich] cost?
+    - what is the price of [fries]?
+    - how much does [cake] cost?
+    - what is the price of [ice cream]?
+    - how much does [coffee] cost?
+    - what is the price of [tea]?
+    - how much does [juice] cost?
+    - what is the price of [soda]?
+    - how much does [water] cost?
+    - what is the price of [beer]?
+    - [coffee] price ?
+    - [tea] price ?
+    - [juice] price ?
+    - [soda] price ?
+    - [water] price ?
+    - price of [beer] ?
+    - price of [momo] ?
+
+
+
+
     
 
 
@@ -163,7 +162,7 @@ nlu:
   
 
 
-# - lookup: item
+# - lookup: FOOD ITEM
 #   examples: |
 #     - Chilly Momo
 #     - Chicken Chilly

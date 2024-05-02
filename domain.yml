@@ -17,7 +17,7 @@ intents:
 
 entities:
 - number
-- item
+- FOOD ITEMS
 - DATE
 
 responses:
@@ -57,7 +57,7 @@ slots:
     influence_conversation: true
     mappings:
     - type: from_entity
-      entity: item
+      entity: FOOD ITEMS
 
   Day:
     type: text

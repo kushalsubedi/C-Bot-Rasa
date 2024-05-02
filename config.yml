@@ -51,7 +51,7 @@ language: en
 
 pipeline:
   - name: SpacyNLP
-    model: en_core_web_md
+    model: en_ner_demo_replace
   - name: SpacyTokenizer
   - name: SpacyFeaturizer
   - name: RegexFeaturizer
@@ -67,6 +67,7 @@ pipeline:
     max_ngram: 4
   - name: DIETClassifier
     epochs: 100
+    analyzer: char_wb
     constrain_similarities: true
   - name: EntitySynonymMapper
   - name: ResponseSelector
